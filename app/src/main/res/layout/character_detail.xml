@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:id="@+id/character_detail"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:adjustViewBounds="true"
+                  android:background="@color/back"
+                  android:orientation="vertical">
+
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/MarvelColor"/>
+
+
+        </android.support.design.widget.AppBarLayout>
+
+        <ImageView
+            android:id="@+id/character_img"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY"
+            android:layout_height="wrap_content"/>
+
+
+        <TextView
+            android:id="@+id/character_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:fontFamily="sans-serif-smallcaps"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textSize="20dp"/>
+    </LinearLayout>
+
+</ScrollView>

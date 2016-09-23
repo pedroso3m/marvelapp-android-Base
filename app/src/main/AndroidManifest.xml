@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="br.com.frameworksystem.marvelapp">
+
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MANAGE_DOCUMENTS"/>
+
+
+    <application
+        android:name=".MarvelApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="br.com.frameworksystem.marvelapp.ui.activities.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activities.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activities.DetailActivity"
+            android:parentActivityName=".ui.activities.MainActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".ui.activities.CharacterDetail"
+            android:parentActivityName=".ui.activities.MainActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="226646cc56a7882ac341a609966f0e601e7e04f1" />
+    </application>
+
+</manifest>
